@@ -1,11 +1,11 @@
 #include <iostream>
-#include "BinarySearchTree.hpp"
+#include "AVLTree.hpp"
 
 using namespace std;
 
 
 int main() {
-    BinarySearchTree tree;
+    AVLTree tree;
     int choice, val;
 
     while (true) {
@@ -13,7 +13,7 @@ int main() {
         cout << "1. Insert\n";
         cout << "2. Delete\n";
         cout << "3. Find\n";
-        cout << "4. Print (Inorder)\n";
+        cout << "4. Print\n";
         cout << "0. Exit\n";
         cout << "Choice: ";
         cin >> choice;
@@ -35,14 +35,14 @@ int main() {
             case 3:
                 cout << "Enter value: ";
                 cin >> val;
-                if (tree.findNode(tree.getRoot(), val))
+                if (tree.findNode(tree.tree->getRoot(), val))
                     cout << "Found\n";
                 else
                     cout << "Not found\n";
                 break;
 
             case 4:
-                tree.print();
+                tree.tree->print();
                 break;
 
             case 0:
