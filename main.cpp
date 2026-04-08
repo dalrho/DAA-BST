@@ -1,11 +1,11 @@
 #include <iostream>
-#include "AVLTree.hpp"
+#include "SplayTree.hpp"
 
 using namespace std;
 
 
 int main() {
-    AVLTree tree;
+    SplayTree tree;
     int choice, val;
 
     while (true) {
