@@ -156,7 +156,6 @@ class AVLTree {
     }
 
     Node* rebalance(Node* node) {
-        updateHeight(node);
         int balance = getBalance(node);
 
         // LEFT HEAVY
