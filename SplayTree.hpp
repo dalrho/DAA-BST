@@ -76,6 +76,13 @@ public:
         }
     }
 
+    Node* findNode(Node* root, int num) {
+        if (!root) return nullptr;
+        if (root->elem == num) return root;
+        else if (num < root->elem) return findNode(root->left, num);
+        else return findNode(root->right, num);
+    }
+
 
 
     bool search(int key) {
